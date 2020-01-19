@@ -253,7 +253,7 @@ const square1 = function(x, y){
 const square2 = function(x = 5){
   return (x * x);
 };
-console.log(square2()) // will return 25
+//console.log(square2(9)) // will return 25
 
 //IMMEDIATELY INCOCABLE FUNCTION EXPRESSIONS - IIFEs. if functions you declare and run at the same time
 // We make an expression by putting the anonymous function inside a paranthesis
@@ -262,9 +262,120 @@ console.log(square2()) // will return 25
 })(); // you put a paranthesis in front as you would any other function
 
 
-// IIFEs can also take parameters
+//IIFEs can also take parameters
 (function(festName){
-  console.log("You are a master latcher " + name)
+  console.log(festName)
 })("Timothy");
+
+// Even parameters with default argument
+(function(maidenName = "Argatha"){
+  console.log(maidenName)
+})(); // This will print Argatha as the default name
+
+// Functions inside an object
+// i.e. instead of a global scope
+// THIS IS CALLED THE PROPERTY METHOD. PROPERTY METHOD. PROPERTY METHOD. PROPERTY METHOD.
+// WHEN A FUNCTION IS PUT INSIDE OF AN OBJECT IT'S CALLED A METHOD
+
+const todo = {
+  add: function(){
+    return("Add todo...");
+  }
+};
+console.log(todo.add());
+// MULTIPLE FUNCTIONS IN THE AN OBJECT
+
+const schedule = {
+  draw: function(){
+    return("Same todo...")
+  },
+  shopping: function(numb){
+    return(`Checkout out ${numb}`);
+  }
+};
+console.log(schedule.draw());
+console.log(schedule.shopping(7))
+/// //////////////////////////////
+
+// GENERAL LOOPS. GENERAL LOOPS. GENERAL LOOPS. GENERAL LOOPS. GENERAL LOOPS
+// FOR LOOPS, WHILE LOOPS, DO WHILE LOOPS PLUS ARRAY SPECIFIC FOR EACH, MAP, FOR IN 
+// FOR LOOPS TAKES 3 PARAMETERS SEPERATED BY SEMICOLUMN
+
+for(let i = 0; i < 10; i++){
+  console.log(`Number  ${i}`)
+};
+// You can concatenate anything you want. e.g with template literals
+for(let i = 0; i < 10; i++){
+  console.log(`Number  ${i}`)
+};
+
+console.log("JAHWPJPKPPHODFGHPÅÖPLOKIUYTDFGPOLIKJH");
+console.log();
+
+for(let i = 0; i < 10; i++){
+  if(i == 2){
+    console.log(`Two is my favorite number`)
+  }
+  console.log(`Number  ${i}`)
+};
+
+console.log("");
+// To avoide printing two is my favorite number and 2 on different lines, use "continue"
+for(let i = 0; i < 10; i++){
+  if(i == 2){
+    console.log(`Two is my favorite number`);
+    continue;
+  }
+  console.log(`Number  ${i}`)
+};
+
+console.log("");
+// To avoide printing two is my favorite number and 2 on different lines, use "continue"
+for(let i = 0; i < 10; i++){
+  if(i == 2){
+    console.log(`Two is my favorite number`);
+    break;
+  }
+  console.log(`Number  ${i}`)
+};
+
+// WHILE LOOPS TAKES 3 PARAMETERS SEPERATED BY SEMICOLUMN
+//BETTER THAN FOR LOOPS WHEN THE NUMBER OF ITERATION IS UNCLEAR
+//SYNTAX: SET A VARIABLEe.g.P OUTSIDE THE LOOP. Only the condition goes in the parethesis
+//The incrementing i.e i++ is done inside the curley braces
+
+console.log(" ")
+
+let p = 0;
+
+while(p < 10){
+  console.log(`Numper p ${p}`);
+  p++;
+  
+}
+
+// DO WHILE LOOPS
+// ALWAYS GONNA RUN AT LEAST ONCE. NO MATTER WHAT.
+// the variable is declared outside the do loop statement
+// SYNTAX: The DO statement IS FOLLOWED BY CURLEY BRACES.
+// THE INCREMENTER (i++) IS PLACED IN THE BRACES
+// THE CONDITION (while) IS PLACED BELOW THE BRACES
+
+let m = 0;
+do{
+  if(m == 2){
+    console.log((`${m} is the third iteration of this loop`));// why does this break the loop?
+    
+  }
+  console.log(`Number m ${m}`)
+  m++;
+}
+while(m < 10);
+
+console.log("")
+
+
+
+
 
 
