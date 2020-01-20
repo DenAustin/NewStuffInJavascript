@@ -379,3 +379,167 @@ console.log("")
 
 
 
+// CLASS
+// OBJECT ORIENTED PROGRAMMING
+//SYNTAX
+class ClassName{
+  
+}
+// class instantiation
+const obj = new ClassName
+
+// constructor attached in the braces
+class ClassMembers{
+  constructor(firstName, lastName, age){
+    this.firsName = firstName
+    this.lastName = lastName
+    this.age = age
+  }
+  
+}
+// 
+const obj1 = new ClassMembers
+
+class Person{
+  constructor(firstName, lastName, age){
+    this.firsName = firstName
+    this.lastName = lastName
+    this.age = age
+    this.score = 97
+  }
+  
+}
+// class instantiation
+const obj2 = new Person
+
+const p1 = new Person("Paulolo", "Mika", 20)
+const p2 = new Person("Agularia", "Jupit", 87)
+console.log(p1)
+console.log(p2)
+
+class Guys{
+  constructor(firstName, lastName, age){
+    this.firsName = firstName
+    this.lastName = lastName
+    this.age = age
+    this.score = 97
+    this.skills
+
+  }
+
+  getFullName(){
+    this.firsName += firstName + " " + this.lastName
+  }
+  
+  getScore(){
+    return this.score
+  }
+  
+  addSkill(skill){
+    this.skills.push(skill)
+  }
+  static someSkills(){
+    const skills = ["java", "python", "javascript"]
+  }
+}
+  
+
+
+
+// CHILD
+
+
+//REPLICATION
+
+const todos = ["item1", "item2","item3"];
+
+const newTodos = [...todos];
+console.log(newTodos)
+
+const lists = ["java", "python", "javascript"]
+
+const todoList = [...todos, ...lists];
+console.log(todoList);
+
+
+// Alert
+//alert("HelloWorl")
+//Confirm
+//const input = prompt();
+//alert(prompt);
+//Confirm
+/*
+if(confirm("Are you sure")){
+  console.log("Yes")
+}else{
+  console.log("No")
+}
+
+*/
+
+
+let val;
+
+val = window.outerHeight;
+val = window.innerHeight;
+val = window.outerWidth;
+val = window.innerWidth;
+// scroll points
+val = window.scrollX;
+
+// Location
+val = window.location;
+val = window.location.hostname;
+val = window.location.href;
+val = window.location.search;
+
+
+// Redirect
+
+val = window.location.hostname;
+//window.history.go(-20);
+
+val = window.history.length;
+
+//Navigator
+val = window.navigator;
+val = window.navigator.appName;
+val = window.navigator.appVersion;
+val = window.navigator.userAgent;
+val = window.navigator.vendor;
+val = window.navigator.language;
+
+console.log(val);
+
+
+// Scope
+// Global Scope
+var a = 1;
+let b = 2;
+const c = 3;
+
+
+let test = () =>{
+  var a =4;
+  let b = 5;
+  const c = 6
+  console.log("Function Scope: ", a, b, c)
+}
+
+test();
+
+// Block level scope
+//Block here means anything enclosed in curley braces as in if statement
+if(true){
+  var a = 4;
+  let b = 5;
+  const c = 6;
+  console.log("If Scope: ", a, b, c);
+}
+
+
+for(let a = 0; a <10; a++){
+  console.log(`Loop: ${a}`)
+}
+console.log("Global Scope: ", a, b, c);
+
